@@ -157,6 +157,79 @@ Tabla comparativa
 | Flexibilidad   | Media               | Alta                       |
 
 
+ Funcionamiento
+
+- Cada **tabla** representa una entidad.
+- Cada **fila** representa un registro.
+- Cada **columna** representa un atributo.
+- Las tablas se relacionan mediante **claves primarias y foráneas**.
+- Se utiliza el lenguaje **SQL** para manipular la información.
+
+ Características principales
+
+- Estructura fija y bien definida.
+- Integridad referencial.
+- Normalización para evitar redundancia.
+- Consultas estructuradas y optimizadas.
+
+ Ventajas
+
+- Alta consistencia de datos.
+- Seguridad y control de acceso.
+- Rendimiento eficiente en grandes volúmenes estructurados.
+- Estándar ampliamente adoptado en empresas.
+
+ Limitaciones
+
+- Menor flexibilidad ante cambios estructurales.
+- No está diseñado para representar significado profundo.
+- No permite inferencia automática.
+
+# Diagrama Comparativo: Modelo Relacional vs Modelo de Conocimiento
+
+El siguiente diagrama muestra las diferencias estructurales y funcionales entre el Modelo Relacional y el Modelo de Conocimiento
+
+```mermaid
+flowchart LR
+
+    subgraph MR[Modelo Relacional]
+        A[Tablas]
+        B[Filas]
+        C[Columnas]
+        D[Clave Primaria]
+        E[Clave Foranea]
+        F[SQL]
+        G[Datos Estructurados]
+
+        A --> B
+        A --> C
+        C --> D
+        C --> E
+        E --> D
+        A --> F
+        A --> G
+    end
+
+    subgraph MC[Modelo de Conocimiento]
+        H[Conceptos]
+        I[Relaciones]
+        J[Reglas]
+        K[Inferencia]
+        L[Grafos]
+        M[Ontologias]
+
+        H --> I
+        I --> J
+        J --> K
+        H --> L
+        H --> M
+    end
+
+    MR --- MC
+```
+
+---
+
 ---
 
 ## 5. Análisis y discusión
